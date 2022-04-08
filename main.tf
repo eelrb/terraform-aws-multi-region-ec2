@@ -9,6 +9,14 @@ provider "aws" {
   region = var.aws_region_2
 }
 */
+  
+terraform {
+  required_providers {
+    aws = {
+      configuration_aliases = [ aws.region_2 ]
+    }
+  }
+}
 
 data "aws_ami" "my_image_1" {
   

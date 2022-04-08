@@ -37,8 +37,7 @@ resource "aws_instance" "blee-ec2" {
     #Name = "${var.instance_name_vault}"
 
   #}
-  providers = {
-    aws = aws
+  providers = aws
   }
 }
 
@@ -53,7 +52,5 @@ resource "aws_instance" "blee-ec2-2" {
     #Name = "${var.instance_name_vault}"
 
   #}
-  providers = {
-    aws = aws.us-east-2
-  }
+  providers = aws.us-east-2
 }

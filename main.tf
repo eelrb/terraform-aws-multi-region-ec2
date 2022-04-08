@@ -37,4 +37,7 @@ resource "aws_instance" "blee-ec2" {
     #Name = "${var.instance_name_vault}"
 
   #}
+  providers = {
+    aws = "aws"
+  }
 }

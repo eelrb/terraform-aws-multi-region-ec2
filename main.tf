@@ -38,7 +38,7 @@ resource "aws_instance" "blee-ec2" {
 
   #}
   provider = aws
-  }
+  
 }
 
 resource "aws_instance" "blee-ec2-2" {

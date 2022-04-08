@@ -2,11 +2,12 @@ provider "aws" {
   region = var.aws_region_1 
 }
 
+/*
 provider "aws" {
   alias  = "region_2"
   region = var.aws_region_2
 }
-
+*/
 
 data "aws_ami" "my_image_1" {
   
@@ -28,7 +29,8 @@ data "aws_ami" "my_image_1" {
 
 }
 
-data "aws_ami" "my_image_2" {
+/*
+  data "aws_ami" "my_image_2" {
   
   most_recent=true
   
@@ -48,7 +50,8 @@ data "aws_ami" "my_image_2" {
 
 }
 
-
+*/
+  
 resource "aws_instance" "blee-ec2" {
   count = "${var.instance_count}"
   ami           = "${data.aws_ami.my_image_1.id}"
@@ -63,7 +66,7 @@ resource "aws_instance" "blee-ec2" {
   provider = aws
   
 }
-
+/*
 resource "aws_instance" "blee-ec2-2" {
   count = "${var.instance_count}"
   ami           = "${data.aws_ami.my_image_2.id}"
@@ -77,3 +80,4 @@ resource "aws_instance" "blee-ec2-2" {
   #}
   provider = aws.region_2
 }
+*/

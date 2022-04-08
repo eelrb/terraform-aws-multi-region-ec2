@@ -13,7 +13,7 @@ data "aws_ami" "my_image_1" {
   
   most_recent=true
   
-  provider = aws
+  #provider = aws
 
   filter {
       name   = "name"
@@ -63,7 +63,7 @@ resource "aws_instance" "blee-ec2" {
     #Name = "${var.instance_name_vault}"
 
   #}
-  provider = aws
+  #provider = aws
   
 }
 /*

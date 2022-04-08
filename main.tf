@@ -41,3 +41,19 @@ resource "aws_instance" "blee-ec2" {
     aws = "aws"
   }
 }
+
+resource "aws_instance" "blee-ec2-2" {
+  count = "${var.instance_count}"
+  ami           = "${data.aws_ami.my_image.id}"
+  instance_type = "t2.micro"
+  #vpc_security_group_ids = ["${aws_security_group.main_sec_group.id}"]
+  #subnet_id = "${aws_subnet.subnet1.id}"
+  #key_name = "${var.key_name}"
+  #tags {
+    #Name = "${var.instance_name_vault}"
+
+  #}
+  providers = {
+    aws = "aws.us-east-2"
+  }
+}

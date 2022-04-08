@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 provider "aws" {
-  alias  = "us-east-2"
+  alias  = "region_2"
   region = var.aws_region_2
 }
 
@@ -75,5 +75,5 @@ resource "aws_instance" "blee-ec2-2" {
     #Name = "${var.instance_name_vault}"
 
   #}
-  provider = aws.us-east-2
+  provider = aws.region_2
 }

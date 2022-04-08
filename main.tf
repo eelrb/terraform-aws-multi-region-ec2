@@ -38,7 +38,7 @@ resource "aws_instance" "blee-ec2" {
 
   #}
   providers = {
-    aws = "aws"
+    aws = aws
   }
 }
 
@@ -54,6 +54,6 @@ resource "aws_instance" "blee-ec2-2" {
 
   #}
   providers = {
-    aws = "aws.us-east-2"
+    aws = aws.us-east-2
   }
 }

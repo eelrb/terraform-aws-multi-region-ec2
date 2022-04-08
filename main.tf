@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    aws = {
+      #configuration_aliases = [ aws.region_2 ]
+    }
+  }
+}
+
+
 /*
   provider "aws" {
   region = var.aws_region_1 
@@ -10,13 +19,7 @@ provider "aws" {
 }
 */
   
-terraform {
-  required_providers {
-    aws = {
-      #configuration_aliases = [ aws.region_2 ]
-    }
-  }
-}
+
 
 data "aws_ami" "my_image_1" {
   

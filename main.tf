@@ -32,7 +32,7 @@ data "aws_ami" "my_image_2" {
   
   most_recent=true
   
-  provider = aws.us-east-2
+  provider = aws.region_2
 
   filter {
       name   = "name"

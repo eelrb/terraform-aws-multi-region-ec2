@@ -13,7 +13,7 @@ provider "aws" {
 terraform {
   required_providers {
     aws = {
-      configuration_aliases = [ aws.region_2 ]
+      #configuration_aliases = [ aws.region_2 ]
     }
   }
 }
